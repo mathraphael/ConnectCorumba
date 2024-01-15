@@ -488,19 +488,13 @@ footer {
     }
 
     #footer_content{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-}
-
-@media screen and (max-width : 420px){
-    #footer_content{
         grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
         padding: 3rem 2rem;
     }
 
 }
+
 
 
 
