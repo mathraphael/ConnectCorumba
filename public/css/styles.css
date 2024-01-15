@@ -1,0 +1,410 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.navbar-one{
+    padding: 0 30px;
+    width: 100%;
+
+}
+
+
+
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar-one{
+    background-color: #070026 ;
+    color: white;
+    height: 55px;
+    cursor: pointer;
+}
+ 
+.slogan-title{
+    font-size: 12px;
+}
+
+
+.right a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-left: 30px;
+    color: white;
+    font-weight:400;
+    font-size: 25px;
+}
+
+
+.right > div a:hover{
+    font-size: 30px;
+    transition:all 0.2s;
+}
+
+.navbar-second{
+    background-color: #070026;
+    width: 100%;
+    position: sticky;
+    display: flex;
+    text-align: center;
+    padding: 0;
+    justify-content: space-between;
+    height: 128px;
+    z-index: 1;
+}
+
+.navbar-second .item-esq{
+    display: flex;
+
+}
+
+.navbar-second .title{
+    color: #FFFF;
+    display: flex;
+    letter-spacing: 1px;
+    display: none;
+}
+
+.icon img{
+    width: 180px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.navbar-second ol{
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+        
+}
+
+
+.navbar-second ol li a {
+    color: #FFFF;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 5px 30px;
+}
+
+.navbar-second ol li:hover a{
+    background-color: #FFFF;
+    color: #070026;
+    transition: 0.5s;
+
+}
+
+.navbar-second .search-box{
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+}
+
+.navbar-second .search-box input{
+    border: none;
+    outline: none;
+    background: #FFFF;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 350px;
+
+}
+
+.navbar-second .search-box span{
+    color: #070026;
+    font-size: 20px;
+    background: #FFF;
+    height: 100%;
+    padding: 7px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.navbar-second .search-box span:hover{
+    color: #FFF;
+}
+
+.navbar-second .search-box span::after{
+    height: 100%;
+    width: 0%;
+    content: '';
+    background: #F2508B;
+    position: absolute;
+    top: 0;
+    right:  0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.navbar-second .search-box span:hover::after{
+    width: 100%;
+}
+
+.navbar-second .bar{
+    position: relative;
+    margin: auto;
+    display: none;
+    
+}
+
+.navbar-second .bar span{
+    position: absolute;
+    color: #FFF;
+    font-size: 35px;
+
+}
+
+.btn-mobile{
+    display: none;
+}
+
+.evento-principal h1,
+.oportunidades h1,
+.evento-sub h1{
+    margin-top: 20px;
+    padding: 0 10px;
+
+}
+
+.card {
+    
+    margin: auto;
+    margin-top: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centralizar conteúdo */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição de 0.3 segundos com aceleração suave */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho em 5% ao passar o cursor */
+}
+
+.card-description {
+    margin-top: 20px;
+    color: #333;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto; /* Centraliza a imagem dentro do card */
+}
+
+
+.container {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; /* Espaço entre os cards, ajuste conforme necessário */
+}
+
+.card2 {
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 400px; /* Ajuste conforme necessário */
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centralizar conteúdo */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição de 0.3 segundos com aceleração suave */
+}
+
+.card2:hover {
+    transform: scale(1.05); /* Aumenta o tamanho em 5% ao passar o cursor */
+}
+
+.card2 img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto; /* Centraliza a imagem dentro do card */
+}
+
+.card2-description {
+    margin-top: 20px;
+    color: #333;
+}
+
+footer {
+    background-color: #070026;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width : 1250px) {
+    .navbar-second{
+        display: block;
+        padding: 0;
+    }
+
+    .navbar-second img{
+        display: none;
+    }
+
+    .navbar-second .title{
+        display: inline-block;
+        padding: 15px 30px;
+    }
+
+    .navbar-second .search-box{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 13px;
+        margin-top: 20px;
+    }
+
+    .navbar-second .search-box input{
+        width: 90%;
+    }
+
+    .btn-mobile{
+        display: inline-block;
+        text-align: center;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: #FFF;
+
+    }
+    .btn-mobile i{
+        font-size: 25px;
+    }
+
+    .navbar-second ol{
+        display: block;
+        flex-direction: column;
+        background: #FFF;
+        position: absolute;
+        width: 100%;
+        top: 128px;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    
+    }
+
+    #nav.active .nav-list{
+        height: calc(100vh - 128px);
+        visibility: visible;
+        overflow-y: auto;
+        
+    }
+
+    .navbar-second ol li{
+        text-align: center;
+    }
+
+    .navbar-second ol li a{
+        color: #070026;
+        background: #fff;
+        font-size: 28px;
+        padding: 25px;
+        display: block;
+        border-bottom: 2px solid rgba(0, 0, 0, .05 );
+        
+    }
+
+    .navbar-second ol li a:hover{
+        background: #070026;
+        color: white;
+        transition:all 0.5s;
+
+    }
+    .slogan-title{
+        display: none;
+        
+    }
+    .right{
+        display: none;
+    }
+    
+    .navbar-one{
+        display: none;
+    }
+
+    .navbar-second .item-esq{
+        display: inline;
+    }
+}
+
+
+
+
+
+
+
+
+

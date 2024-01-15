@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1">
+    <title>Connect Pantanal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/app.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+    <nav class="navbar-one flex">
+        <div class="left flex">
+            <h1 class="slogan-title">
+                DESCUBRA O MELHOR DA CAPITAL DO PANTANAL
+            </h1>
+        </div>
+        <div class="right flex">
+            <div class="facebook">
+                <a href="https://www.facebook.com/seu-usuario" target="_blank">
+                    <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
+                </a>
+            </div>
+
+            <div class="instagram">
+                <a href="https://www.instagram.com/connectpantanal/" target="_blank">
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                </a>
+            </div>
+
+            <div class="wpp">
+                <a href="https://api.whatsapp.com/send?phone=5567998712180" target="_blank">
+                    <i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
+                </a>
+            </div>
+            <div class="email">
+                <a href="mailto:seu-email@example.com">
+                    <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar-second" id="nav">
+        <div class="item-esq">
+            <div class="icon">
+                <h1 class="title">CONNECT PANTANAL</h1>
+                <button class="btn-mobile" id="btn-mobile">
+                        <i class="fa-solid fa-bars" style="color: #ffffff; "></i>
+                </button>
+                <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2FLOGO.png?alt=media" alt="logo">
+            </div>
+            <div class="search-box">
+                <input  type="search" placeholder="Buscar">
+                <span class="fa fa-search"></span>
+            </div>
+        </div>
+             
+        <ol class="nav-list">
+            <li><a href="#">Festas</a></li>
+            <li><a href="#">Shows</a></li>
+            <li><a href="#">Carnaval</a></li>
+            <li><a href="#">Bar</a></li>
+            <li><a href="#">Restaurante</a></li>
+        </ol>
+        
+        
+    </nav>
+
+    <section class="evento-principal">
+        <h1>Evento Principal</h1>
+    <div class="card">
+        <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="Descrição da Imagem">
+        <div class="card-description">
+            <h2>Descrição da Imagem</h2>
+            <p>Aqui você pode adicionar uma breve descrição sobre a imagem.</p>
+        </div>
+    </div>
+    </section>
+
+    <section class="evento-sub">
+        <h1>Em Destaque</h1>
+
+        <div class="card-container">
+            <div class="card2">
+                <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="Descrição da Imagem">
+                <div class="card2-description">
+                    <h2>Descrição da Imagem</h2>
+                    <p>Aqui você pode adicionar uma breve descrição sobre a imagem.</p>
+                </div>
+            </div>
+        
+            <div class="card2">
+                <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="Descrição da Imagem">
+                <div class="card2-description">
+                    <h2>Descrição da Imagem</h2>
+                    <p>Aqui você pode adicionar uma breve descrição sobre a imagem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="oportunidades">
+        <h1>Oportunidades</h1>    
+        <div class="card2">
+            <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="Descrição da Imagem">
+            <div class="card2-description">
+                <h2>Descrição da Imagem</h2>
+                <p>Aqui você pode adicionar uma breve descrição sobre a imagem.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre Nós</h3>
+                <p>Connet Pantanal 2024</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Página Inicial</a></li>
+                    <li><a href="#">Parceiros</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+
+        const firebaseConfig = {
+        apiKey: "AIzaSyBoGw03HZ5iLSIF0D_HsWfAzUYU868yWy0",
+        authDomain: "connect-pantanal.firebaseapp.com",
+        projectId: "connect-pantanal",
+        storageBucket: "connect-pantanal.appspot.com",
+        messagingSenderId: "597701968157",
+        appId: "1:597701968157:web:f68c02a3af92448f0021f4",
+        measurementId: "G-4LDGHT0HJ9"
+    };
+
+     // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+
+
+   
+</body>
+</html>
