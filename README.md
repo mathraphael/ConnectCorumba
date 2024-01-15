@@ -1,0 +1,2 @@
+Como uma Agêcia criativa, nosso objetivo é fazer com que nossos pensadores apaixonados e nossa equipe criativa trabalhe de perto com caa marca para criar estratégias criativas e inovadoras que produzem resultado efetivos.
+Connect Pantanal trabalha com empresas de todos os tipos e tamanhos para ajudá-las a criar sua mensagem única. Nossa fundamentl missão é fornecer um serviço criativo de qualidade que as marcas precisam para se manterem à frente da competição e não descansamos enquanto não atingirmos os resultados desejados.
