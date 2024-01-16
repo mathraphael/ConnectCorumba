@@ -11,6 +11,7 @@
 body{
     width: 100%;
     height: 100%;
+    background-color: #D9D9D9;
     
 }
 
@@ -32,7 +33,7 @@ body{
 }
 
 .navbar-one{
-    background-color: #1261A6 ;
+    background-color: #070026 ;
     color: white;
     height: 55px;
     cursor: pointer;
@@ -185,12 +186,12 @@ body{
 .oportunidades h1,
 .evento-sub h1{
     margin-top: 20px;
-    padding: 0 10px;
+    padding: 0 15px;
 
 }
 
 .card {
-    
+    width: 80%;
     margin: auto;
     margin-top: 30px;
     background-color: #fff;
@@ -200,26 +201,33 @@ body{
 }
 
 .card:hover {
-    transform: scale(1.05); /* Aumenta o tamanho em 5% ao passar o cursor */
+    background-color: #070026;
+    transform: scale(1.05);
+    color: #FFF; /* Aumenta o tamanho em 5% ao passar o cursor */
 }
 
 .card-description {
+    margin: auto;
     margin-top: 20px;
-    color: #333;
+    
 }
+
+
 
 .card img {
-    max-width: 100%;
-    height: auto;
+    width: 90%;
+    height: calc(100vh - 370px);
     display: block;
-    margin: auto; /* Centraliza a imagem dentro do card */
+    margin: auto;
+    padding: 10px; /* Centraliza a imagem dentro do card */
 }
 
 
-.container {
+.card-container {
     display: flex;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px; /* Espaço entre os cards, ajuste conforme necessário */
+    gap: 2rem; /* Espaço entre os cards, ajuste conforme necessário */
+    padding: 20px;
 }
 
 .card2 {
@@ -381,10 +389,11 @@ footer {
 #footer_copyright {
     display: flex;
     justify-content: center;
-    background-color: #1261A6;
+    background-color: #070026;
     font-size: 0.9rem;
     padding: 1rem;
     font-weight: 100;
+    border-top: 1px solid #333;
 }
 
 @media screen and (max-width : 1250px) {
@@ -492,8 +501,17 @@ footer {
         gap: 2rem;
         padding: 3rem 2rem;
     }
+    .card-container{
+        display: inline;
+        
+    }
+
+    
 
 }
+
+
+
 
 
 
