@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Syne', sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     width: 100%;
@@ -394,6 +395,36 @@ footer {
     padding: 1rem;
     font-weight: 100;
     border-top: 1px solid #333;
+}
+
+.back-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff2992;
+    border-radius: 5rem;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+
+}
+
+.back-top span{
+    color:#FFF;
+    font-size: 1.5rem;
+    transition: 0.2s ease-out;
+
+}
+
+.back-top:hover{
+    background-color: #F2508B;
+}
+
+.back-top:hover span{
+    transform: translateY(-4px);
 }
 
 @media screen and (max-width : 1250px) {
