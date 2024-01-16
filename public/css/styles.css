@@ -12,7 +12,7 @@
 body{
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #070026 10%, #FFF 100%);
+    background: linear-gradient(180deg, #070026 0%, rgba(10, 87, 155, 0.87) 33.5%, rgba(0, 125, 234, 0.54) 52%, rgba(7, 91, 165, 0.78) 66%, #070026 100%);
     
 }
 
@@ -34,7 +34,7 @@ body{
 }
 
 .navbar-one{
-    background-color: #070026 ;
+    color: transparent;
     color: white;
     height: 55px;
     cursor: pointer;
@@ -62,7 +62,6 @@ body{
 }
 
 .navbar-second{
-    background-color: #070026;
     width: 100%;
     position: sticky;
     display: flex;
@@ -71,6 +70,7 @@ body{
     justify-content: space-between;
     height: 128px;
     z-index: 1;
+    color: transparent;
 }
 
 .navbar-second .item-esq{
@@ -183,97 +183,92 @@ body{
     display: none;
 }
 
-.evento-principal h1,
-.oportunidades h1,
-.evento-sub h1{
-    margin-top: 30px;
-    padding: 0 15px;
-    color: #fffafa;
-    text-shadow: 0px 4px 3px #070026;
 
-
-}
-
-.card {
-    width: 90%;
+.container{
     display: flex;
-    margin: auto;
-    margin-top: 30px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out; /* Adiciona uma transição de 0.3 segundos com aceleração suave */
-}
-
-.card:hover {
-    transform: scale(1.05);/* Aumenta o tamanho em 5% ao passar o cursor */
-}
-
-.card-description {
-    margin: 10px;
-    margin-top: 20px;
-    display: inline-block;
+    align-items: center;
+    justify-content: center;
     
 }
 
-.card-description .date-time{
-    margin-bottom: 10px;
-}
-
-.future {
-    color: blue; /* Cor para datas futuras */
-}
-
-.past {
-    color: red; /* Cor para datas passadas */
-}
-
-
-
-
-.card img {
-    width: 50%;
-    height: auto;
-    padding: 10px;
-}
-
-
-.card-container {
+.card{
+    overflow: hidden;
+    border-radius: 16px;
+    max-width: 360px;
+    background-color: #FFF;
     display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 2rem; /* Espaço entre os cards, ajuste conforme necessário */
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .5s;
+    background-color: #070026;
+
+
 }
 
-.card2 {
-    border: 1px solid #ddd;
-    padding: 20px;
-    max-width: 400px; /* Ajuste conforme necessário */
-    width: 100%;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+.card:hover{
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centralizar conteúdo */
-    transition: transform 0.3s ease-in-out; /* Adiciona uma transição de 0.3 segundos com aceleração suave */
+    color: #070026;
 }
 
-.card2:hover {
-    transform: scale(1.05); /* Aumenta o tamanho em 5% ao passar o cursor */
+
+.card img{
+    background-position: center;
+    background-size: cover;
+    width: 360px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+
 }
 
-.card2 img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: auto; /* Centraliza a imagem dentro do card */
+.card:hover img{
+    opacity: .9;
+    width: 400px;
 }
 
-.card2-description {
-    margin-top: 20px;
-    color: #333;
+.card .content{
+    padding: 0 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+    transform: translateY(30px);
 }
+
+.card:hover .content{
+    padding: 20px;
+    height: 260px;
+    transform: translateY(0px);
+}
+
+.card .content h1{
+    font-size: 24px;
+    color: #070026;
+}
+
+.card .content p{
+    font-size: 14px;
+    font-weight: 100;
+    color: #070026;
+    opacity: .7;
+    margin-bottom: 0;
+}
+
+.card:hover .arrow{
+    color: #070026;
+}
+.card .arrow{
+    padding: 15px;
+    font-size: 28px;
+    color: #FFF;
+}
+
+
+
+
 
 footer {
     width: 100%;
