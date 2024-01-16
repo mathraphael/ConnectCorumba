@@ -196,11 +196,11 @@ body{
 
 .card {
     width: 90%;
+    display: flex;
     margin: auto;
     margin-top: 30px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centralizar conteúdo */
     transition: transform 0.3s ease-in-out; /* Adiciona uma transição de 0.3 segundos com aceleração suave */
 }
 
@@ -209,19 +209,30 @@ body{
 }
 
 .card-description {
-    margin: auto;
+    margin: 10px;
     margin-top: 20px;
+    display: inline-block;
     
+}
+
+.card-description .date-time{
+    margin-bottom: 10px;
+}
+
+.future {
+    color: blue; /* Cor para datas futuras */
+}
+
+.past {
+    color: red; /* Cor para datas passadas */
 }
 
 
 
+
 .card img {
-    width: 100%;
-    height: calc(100vh - 360px);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    width: 50%;
+    height: auto;
     padding: 10px;
 }
 
