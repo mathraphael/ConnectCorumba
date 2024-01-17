@@ -9,6 +9,10 @@
     font-family: 'Syne', sans-serif;
     scroll-behavior: smooth;
 }
+
+html{
+    height: 100%;
+}
 body{
     width: 100%;
     height: 100%;
@@ -182,28 +186,123 @@ body{
     display: none;
 }
 
-.eventos-mes .titulo-eventos{
+.wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.slide-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column  ;
+}
+
+.slide-list{
+    display: flex;
+
+}
+
+.slide-item{
+    flex-shrink: 0;
+    padding: 0 30px;
+    width: 70vw;
+}
+
+.slide-content{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.slide-item img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slide-description{
+    color: #FFF;
+    background: linear-gradient(to top, #000,transparent);
+    padding: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slide-description h3{
+    font-size: 30px;
+    position: relative;
+    
+}
+
+.slide-description p{
+    font-size: 15px;
+    padding: 5px 10px;
+    
+}
+
+.slide-nav-button{
+    color: #FFF;
+    background-color: transparent;
+    text-shadow: 0px 4px 3px #070026;
+    font-size: 36px;
+    position: absolute;
+    z-index: 100000;
+}
+
+.slide-nav-previous{
+    left: 20px;
+    border: none;
+}
+
+.slide-nav-next{
+    right: 20px;
+    border: none;
+}
+
+.slide-controls{
+    margin: 30px auto 0;
+    
+}
+
+.slide-control-button{
+    color: #FFF;
+    background: transparent;
+    text-shadow: 0px 4px 3px #070026;
+    font-size: 12px;
+    margin: 0 3px;
+    border: none;
+}
+
+.slide-control-button.active{
+    color: #070026;
+    opacity: .8;
+}
+
+.titulo-eventos{
     color: #FFF;
     text-shadow: 0px 4px 3px #070026;
-    padding: 20px;
+    padding: 30px;
     margin-top: 30px;
 }
 
 
 .container{
     margin: 30px;
-    align-items: center;
-    justify-content: center;
+    justify-items: center;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
     
 }
 
 .card{
     overflow: hidden;
     border-radius: 16px;
-    max-width: 360px;
+    max-width: 300px;
+    height: 300px;
     background-color: #FFF;
     align-items: center;
     justify-content: center;
@@ -222,16 +321,15 @@ body{
 
 
 .card img{
-    background-position: center;
+background-position: center;
     background-size: cover;
-    width: 360px;
-    height: 200px;
+    width: 100%;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all .5s;
     opacity: .8;
-    z-index: 2;
 
 }
 
@@ -244,59 +342,60 @@ body{
     padding: 0 20px;
     overflow: hidden;
     text-align: center;
-    height: 0;
-    transition: all .5s;
-    transform: translateY(30px);
+    height: 300px;
+    
+    
 }
 
-.card:hover .content{
-    padding: 20px;
-    height: 200px;
-    transform: translateY(0px);
-}
+
 
 .card .content h1{
     font-size: 24px;
-    color: #070026;
+    color: #fff;
+    margin-top: 10px;
 }
+
+
+.card:hover .content h1{
+    color: #070026;
+    transition: all 0.5s;
+}
+
+
 
 .card .content p{
     font-size: 14px;
     font-weight: 100;
-    color: #070026;
+    color: #FFF;
     opacity: .7;
-    margin-bottom: 0;
+    
 }
 
-.card:hover .arrow{
+.card:hover .content p{
     color: #070026;
-    transform: rotate(0);
-    padding: 5px;
-}
-.card .arrow{
-    padding: 15px;
-    font-size: 28px;
-    color: #FFF;
-    transform: rotate(-180deg);
     transition: all 0.5s;
-    text-align: center;
 }
 
 .button-card{
-    background: #070026;
+    background: #FFF;
     border-radius: 20px;
     border: none;
-    color: #FFF;
-    padding: 10px;
-    width: 100%;
+    color: #070026;
+    padding: 5px;
+    width: 70%;
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
     text-align: center;
-    margin-top: 90px;
-    
+    margin-top: 50px;
     
 }
+
+.card:hover .button-card{
+    background-color: #070026;
+    color: #FFF;
+}
+
 
 .button-card:hover{
     opacity: .9;
@@ -582,10 +681,12 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
         padding: 3rem 2rem;
+        
 
     }
     .container{
         grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
     }
 
 
