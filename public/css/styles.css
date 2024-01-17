@@ -207,6 +207,7 @@ body{
     flex-shrink: 0;
     padding: 0 30px;
     width: 70vw;
+    cursor: grab;
 }
 
 .slide-content{
@@ -249,6 +250,7 @@ body{
     text-shadow: 0px 4px 3px #070026;
     font-size: 36px;
     position: absolute;
+    cursor: pointer;
     z-index: 100000;
 }
 
@@ -271,13 +273,13 @@ body{
     color: #FFF;
     background: transparent;
     text-shadow: 0px 4px 3px #070026;
-    font-size: 12px;
+    font-size: 15px;
     margin: 0 3px;
     border: none;
 }
 
 .slide-control-button.active{
-    color: #070026;
+    color: #ff2992;
     opacity: .8;
 }
 
@@ -685,20 +687,45 @@ footer {
 
     }
     .container{
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-    }
-
-
-}
-
-@media screen and (max-width: 650px){
-    .container{
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
     }
+    .slide-description{
+        padding: 10px;
+    }
 
+    .slide-description h3{
+        font-size: 20px;
+        top: 0;
+    }
+
+    .slide-description p{
+        display: none;
+    }
+
+    .slide-controls{
+        margin: 15px auto 0;
+    }
+
+    .slide-control-button{
+        font-size: 14px;
+    }
+
+    .slide-nav-button{
+        margin-top: -20px;
+       font-size: 28px;
+    }
     
+    .slide-nav-previous{
+       
+    }
+    
+    .slide-nav-next{
+       
+    }
+    
+
+
 }
 
 

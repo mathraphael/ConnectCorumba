@@ -1,3 +1,4 @@
+
 const btnMobile = document.getElementById('btn-mobile');
 
 function toggleMenu(event){
@@ -6,8 +7,9 @@ function toggleMenu(event){
     nav.classList.toggle('active');
 }
 
+
 btnMobile.addEventListener('click',toggleMenu);
-btnMobile.addEventListener('touchstart',toggleMenu);
+btnMobile.addEventListener('touchstart',toggleMenu, {passive:true});
 
 const btnScrollToTop = document.querySelector("#btnScrollToTop");
 

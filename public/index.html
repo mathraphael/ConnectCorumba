@@ -70,13 +70,13 @@
     </nav>
 
     <section class="destaques" id="destaques">
-        <h1 class="titulo-eventos">Destaques do dia</h1>
+        <h1 class="titulo-eventos">Destaques da Semana</h1>
         <div class="wrapper">
-            <div class="slide-wrapper">
-                <button class="slide-nav-button slide-nav-previous fa-solid fa-chevron-left"></button>
-                <button class="slide-nav-button slide-nav-next fa-solid fa-chevron-right"></button>
-                <div class="slide-list">
-                    <div class="slide-item">
+            <div class="slide-wrapper" data-slide="wrapper">
+                <button class="slide-nav-button slide-nav-previous fa-solid fa-chevron-left" data-slide="nav-previous-button"></button>
+                <button class="slide-nav-button slide-nav-next fa-solid fa-chevron-right" data-slide="nav-next-button"></button>
+                <div class="slide-list data-slide="list">
+                    <div class="slide-item" data-slide="item" data-index="0">
                         <div class="slide-content">
                             <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
                             <div class="slide-description">
@@ -86,7 +86,17 @@
                         </div>
                     </div>
 
-                    <div class="slide-item">
+                    <div class="slide-item" data-slide="item" data-index="1">
+                        <div class="slide-content">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                            <div class="slide-description" data-slide="item" data-index="0">
+                                <h3>Título do evento</h3>
+                                <p>Descreva brevemente seu evento aqui.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-item" data-slide="item" data-index="2">
                         <div class="slide-content">
                             <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
                             <div class="slide-description">
@@ -96,7 +106,7 @@
                         </div>
                     </div>
 
-                    <div class="slide-item">
+                    <div class="slide-item" data-slide="item" data-index="3">
                         <div class="slide-content">
                             <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
                             <div class="slide-description">
@@ -106,17 +116,7 @@
                         </div>
                     </div>
 
-                    <div class="slide-item">
-                        <div class="slide-content">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
-                            <div class="slide-description">
-                                <h3>Título do evento</h3>
-                                <p>Descreva brevemente seu evento aqui.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide-item">
+                    <div class="slide-item" data-slide="item" data-index="4">
                         <div class="slide-content">
                             <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
                             <div class="slide-description">
@@ -126,12 +126,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-controls">
-                    <button class="slide-control-button fa-solid fa-circle active"></button>
-                    <button class="slide-control-button fa-solid fa-circle"></button>
-                    <button class="slide-control-button fa-solid fa-circle"></button>
-                    <button class="slide-control-button fa-solid fa-circle"></button>
-                    <button class="slide-control-button fa-solid fa-circle"></button>
+                <div class="slide-controls" data-slide="controls-wrapper">
+                    <button class="slide-control-button fa-solid fa-circle active" data-slide="control-button"></button>
+                    <button class="slide-control-button fa-solid fa-circle" data-slide="control-button"></button>
+                    <button class="slide-control-button fa-solid fa-circle" data-slide="control-button"></button>
+                    <button class="slide-control-button fa-solid fa-circle" data-slide="control-button"></button>
+                    <button class="slide-control-button fa-solid fa-circle" data-slide="control-button"></button>
                 </div>
             </div>
         </div>
@@ -323,6 +323,7 @@
         </div>
     </footer>
 
+    <script src="js/slide.js"></script>
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
