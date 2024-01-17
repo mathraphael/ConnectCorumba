@@ -12,8 +12,7 @@
 body{
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #070026 0%, rgba(10, 87, 155, 0.87) 33.5%, rgba(0, 125, 234, 0.54) 52%, rgba(7, 91, 165, 0.78) 66%, #070026 100%);
-    
+    background: linear-gradient(180deg, #070026 0%, rgba(10, 87, 155, 0.87) 33.5%, rgba(0, 125, 234, 0.50) 52%, rgba(7, 91, 165, 0.78) 66%, #070026 100%);    
 }
 
 
@@ -183,11 +182,21 @@ body{
     display: none;
 }
 
+.eventos-mes .titulo-eventos{
+    color: #FFF;
+    text-shadow: 0px 4px 3px #070026;
+    padding: 20px;
+    margin-top: 30px;
+}
+
 
 .container{
-    display: flex;
+    margin: 30px;
     align-items: center;
     justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
     
 }
 
@@ -196,13 +205,12 @@ body{
     border-radius: 16px;
     max-width: 360px;
     background-color: #FFF;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all .5s;
     background-color: #070026;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 
 }
@@ -222,17 +230,20 @@ body{
     align-items: center;
     justify-content: center;
     transition: all .5s;
+    opacity: .8;
+    z-index: 2;
 
 }
 
 .card:hover img{
-    opacity: .9;
-    width: 400px;
+    opacity: 1;
+    width: 100%;
 }
 
 .card .content{
     padding: 0 20px;
     overflow: hidden;
+    text-align: center;
     height: 0;
     transition: all .5s;
     transform: translateY(30px);
@@ -240,7 +251,7 @@ body{
 
 .card:hover .content{
     padding: 20px;
-    height: 260px;
+    height: 200px;
     transform: translateY(0px);
 }
 
@@ -259,11 +270,37 @@ body{
 
 .card:hover .arrow{
     color: #070026;
+    transform: rotate(0);
+    padding: 5px;
 }
 .card .arrow{
     padding: 15px;
     font-size: 28px;
     color: #FFF;
+    transform: rotate(-180deg);
+    transition: all 0.5s;
+    text-align: center;
+}
+
+.button-card{
+    background: #070026;
+    border-radius: 20px;
+    border: none;
+    color: #FFF;
+    padding: 10px;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 90px;
+    
+    
+}
+
+.button-card:hover{
+    opacity: .9;
+
 }
 
 
@@ -539,16 +576,23 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
         padding: 3rem 2rem;
+
     }
-    .card-container{
-        display: inline;
-        
+    .container{
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    
 
 }
 
+@media screen and (max-width: 650px){
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    
+}
 
 
 
