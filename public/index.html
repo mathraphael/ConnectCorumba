@@ -63,7 +63,10 @@
         </div>
              
         <ol class="nav-list">
+            <li><a href="/public/index.html">Home</a></li>
             <li><a href="#">Eventos</a></li>
+            <li><a href="/public/paginas/sobre-nos.html">Sobre  Nós</a></li>
+            
         </ol>
         
         
@@ -321,8 +324,17 @@
     </footer>
 
     <script src="js/slide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     <script type="module">
+
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+            });
 
         initSlider({
             autoPlay: true,  // caso queira que pare colocar aqui como false
@@ -344,53 +356,53 @@
         messagingSenderId: "597701968157",
         appId: "1:597701968157:web:f68c02a3af92448f0021f4",
         measurementId: "G-4LDGHT0HJ9"
-    };
+        };
 
      // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
 
-   // Função para formatar a data e hora
-      // Função para formatar a data e hora em UTC
-      function formatDateTimeUTC() {
-        const now = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZone: 'UTC' };
-        return now.toLocaleDateString('pt-BR', options);
-    }
-
-    // Função para verificar se a data é futura ou passada
-    function isFutureDateUTC(dateTimeString) {
-        const dateTime = new Date(dateTimeString);
-        return dateTime > new Date();
-    }
-
-    // Atualize a data e hora em todos os elementos com a classe "date-time"
-    document.querySelectorAll('.date-time').forEach(element => {
-        const dateTimeString = element.textContent;
-        element.textContent = formatDateTimeUTC();
-
-        if (isFutureDateUTC(dateTimeString)) {
-            element.classList.add('future');
-        } else {
-            element.classList.add('past');
+    // Função para formatar a data e hora
+        // Função para formatar a data e hora em UTC
+        function formatDateTimeUTC() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZone: 'UTC' };
+            return now.toLocaleDateString('pt-BR', options);
         }
-    });
 
-    // Atualize a cada minuto (opcional)
-    setInterval(() => {
+        // Função para verificar se a data é futura ou passada
+        function isFutureDateUTC(dateTimeString) {
+            const dateTime = new Date(dateTimeString);
+            return dateTime > new Date();
+        }
+
+        // Atualize a data e hora em todos os elementos com a classe "date-time"
         document.querySelectorAll('.date-time').forEach(element => {
             const dateTimeString = element.textContent;
             element.textContent = formatDateTimeUTC();
 
-            // Remova a classe anterior e adicione a classe correspondente à data atualizada
-            element.classList.remove('future', 'past');
             if (isFutureDateUTC(dateTimeString)) {
                 element.classList.add('future');
             } else {
                 element.classList.add('past');
             }
         });
-    }, 60000); // Atualiza a cada minuto (60000 milissegundos)
+
+        // Atualize a cada minuto (opcional)
+        setInterval(() => {
+            document.querySelectorAll('.date-time').forEach(element => {
+                const dateTimeString = element.textContent;
+                element.textContent = formatDateTimeUTC();
+
+                // Remova a classe anterior e adicione a classe correspondente à data atualizada
+                element.classList.remove('future', 'past');
+                if (isFutureDateUTC(dateTimeString)) {
+                    element.classList.add('future');
+                } else {
+                    element.classList.add('past');
+                }
+            });
+        }, 60000); // Atualiza a cada minuto (60000 milissegundos)
 
 
 
