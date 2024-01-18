@@ -75,7 +75,8 @@
             <div class="slide-wrapper" data-slide="wrapper">
                 <button class="slide-nav-button slide-nav-previous fa-solid fa-chevron-left" data-slide="nav-previous-button"></button>
                 <button class="slide-nav-button slide-nav-next fa-solid fa-chevron-right" data-slide="nav-next-button"></button>
-                <div class="slide-list data-slide="list">
+                <div class="slide-list" data-slide="list">
+
                     <div class="slide-item" data-slide="item" data-index="0">
                         <div class="slide-content">
                             <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
@@ -89,7 +90,7 @@
                     <div class="slide-item" data-slide="item" data-index="1">
                         <div class="slide-content">
                             <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
-                            <div class="slide-description" data-slide="item" data-index="0">
+                            <div class="slide-description">
                                 <h3>Título do evento</h3>
                                 <p>Descreva brevemente seu evento aqui.</p>
                             </div>
@@ -127,11 +128,7 @@
                     </div>
                 </div>
                 <div class="slide-controls" data-slide="controls-wrapper">
-                    <button class="slide-control-button fa-solid fa-circle active" data-slide="control-button"></button>
-                    <button class="slide-control-button fa-solid fa-circle" data-slide="control-button"></button>
-                    <button class="slide-control-button fa-solid fa-circle" data-slide="control-button"></button>
-                    <button class="slide-control-button fa-solid fa-circle" data-slide="control-button"></button>
-                    <button class="slide-control-button fa-solid fa-circle" data-slide="control-button"></button>
+
                 </div>
             </div>
         </div>
@@ -324,7 +321,17 @@
     </footer>
 
     <script src="js/slide.js"></script>
+
     <script type="module">
+
+        initSlider({
+            autoPlay: true,  // caso queira que pare colocar aqui como false
+            startAtIndex: 0,  // qual slide iniciar
+            timeInterval: 3000  // tempo de passar o slide
+
+        })
+
+        
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
