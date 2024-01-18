@@ -26,7 +26,10 @@ body{
 
 }
 
-
+.label-menu,
+.checkbox{
+    display: none;
+}
 
 
 .flex{
@@ -99,6 +102,7 @@ body{
     display: flex;
     list-style: none;
     margin: auto 0;
+
         
 }
 
@@ -206,6 +210,7 @@ body{
 
 .slide-list{
     display: flex;
+    z-index: -2;
     
 
 }
@@ -262,7 +267,12 @@ body{
     font-size: 36px;
     position: absolute;
     cursor: pointer;
-    z-index: 100000;
+    z-index: -1;
+}
+
+.slide-nav-button:hover{
+    background-color: #070026af;
+    transition: all 0.3s;
 }
 
 .slide-nav-previous{
@@ -603,7 +613,7 @@ footer {
     }
 
     .navbar-second .title{
-        display: inline-block;
+        display: flex;
         padding: 15px 30px;
     }
 
@@ -739,14 +749,47 @@ footer {
         right: 15px;
     }
 
-    .slide-item{
-        width: 98%;
-    }
+  
 
     .wrapper{
         height: 300px;
     }
 
+    .label-menu{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 0.5rem;
+        color: #FFF;
+        padding: 15px 30px;
+        cursor: pointer;
+    }
+
+    .hamburger{
+        border-top: 0.125rem solid;
+        width: 1.25rem;
+    }
+
+    .hamburger::before,
+    .hamburger::after{
+        content: " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background: currentColor;
+        margin-top: 0.3125rem;
+    }
+
+}
+
+@media screen and (max-width : 600px) {
+    .slide-item{
+        width: 98%;
+    }
+    
+    .destaques{
+        padding-top: 30px;
+    }
 }
 
 

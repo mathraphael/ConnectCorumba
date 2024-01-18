@@ -48,12 +48,14 @@
     </nav>
 
     <nav class="navbar-second" id="nav">
+       
         <div class="item-esq">
             <div class="icon">
                 <h1 class="title">CONNECT PANTANAL</h1>
-                <button class="btn-mobile" id="btn-mobile">
-                        <i class="fa-solid fa-bars" style="color: #ffffff; "></i>
-                </button>
+                <input type="checkbox" id="checkbox" class="checkbox"/>
+                <label for="checkbox" class="label-menu">
+                    <span class="hamburger"></span>
+                </label>
                 <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2FLOGO.png?alt=media" alt="logo">
             </div>
             <div class="search-box">
@@ -361,50 +363,6 @@
      // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
-
-    // Função para formatar a data e hora
-        // Função para formatar a data e hora em UTC
-        function formatDateTimeUTC() {
-            const now = new Date();
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZone: 'UTC' };
-            return now.toLocaleDateString('pt-BR', options);
-        }
-
-        // Função para verificar se a data é futura ou passada
-        function isFutureDateUTC(dateTimeString) {
-            const dateTime = new Date(dateTimeString);
-            return dateTime > new Date();
-        }
-
-        // Atualize a data e hora em todos os elementos com a classe "date-time"
-        document.querySelectorAll('.date-time').forEach(element => {
-            const dateTimeString = element.textContent;
-            element.textContent = formatDateTimeUTC();
-
-            if (isFutureDateUTC(dateTimeString)) {
-                element.classList.add('future');
-            } else {
-                element.classList.add('past');
-            }
-        });
-
-        // Atualize a cada minuto (opcional)
-        setInterval(() => {
-            document.querySelectorAll('.date-time').forEach(element => {
-                const dateTimeString = element.textContent;
-                element.textContent = formatDateTimeUTC();
-
-                // Remova a classe anterior e adicione a classe correspondente à data atualizada
-                element.classList.remove('future', 'past');
-                if (isFutureDateUTC(dateTimeString)) {
-                    element.classList.add('future');
-                } else {
-                    element.classList.add('past');
-                }
-            });
-        }, 60000); // Atualiza a cada minuto (60000 milissegundos)
-
-
 
 </script>
 
