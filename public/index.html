@@ -10,7 +10,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="js/app.js"></script>
+    <script defer src="js/slide.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
 
 </head>
 <body>
@@ -39,97 +41,235 @@
                 </a>
             </div>
             <div class="email">
-                <a href="mailto:seu-email@example.com">
+                <a href="mailto:connectpantanal@gmail.com">
                     <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
                 </a>
             </div>
         </div>
     </nav>
 
+    
+                
     <nav class="navbar-second" id="nav">
+       <div class="items">
         <div class="item-esq">
             <div class="icon">
                 <h1 class="title">CONNECT PANTANAL</h1>
-                <button class="btn-mobile" id="btn-mobile">
-                        <i class="fa-solid fa-bars" style="color: #ffffff; "></i>
-                </button>
                 <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2FLOGO.png?alt=media" alt="logo">
             </div>
+
+            
+            </div>
+
+            <div class="item-dir">
+
+                <button class="btn-menu" aria-label = "Abrir Menu" aria-haspopup="true" aria-controls="nav-list" aria-expanded="true">
+                    <span class="hamburger"></span>
+                </button>
+
+            </div>
+        </div>
+
             <div class="search-box">
+
                 <input  type="search" placeholder="Buscar">
                 <span class="fa fa-search"></span>
             </div>
-        </div>
+        
              
-        <ol class="nav-list">
+        <ol class="nav-list" id="nav-list" role="nav-list">
+            <li><a href="/public/index.html">Home</a></li>
             <li><a href="#">Eventos</a></li>
+            <li><a href="/public/paginas/sobre-nos.html">Sobre  Nós</a></li>
+            
         </ol>
         
         
     </nav>
 
-    <section class="evento-principal" id="principal">
-        <h1>Evento Principal</h1>
-    <div class="card">
-        <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="Descrição da Imagem">
-        <div class="card-description">
-            <p class="date-time future">2024-12-31 12:00:00</p>
-            <h2>Descrição da Imagem</h2>
-            <p>Aqui você pode adicionar uma breve descrição sobre a imagem.</p>
-        </div>
-    </div>
-    </section>
+    <section class="destaques" id="destaques">
+        <h1 class="titulo-eventos">Destaques da Semana</h1>
+        <div class="wrapper">
+            <div class="slide-wrapper" data-slide="wrapper">
+                <button class="slide-nav-button slide-nav-previous fa-solid fa-chevron-left" data-slide="nav-previous-button"></button>
+                <button class="slide-nav-button slide-nav-next fa-solid fa-chevron-right" data-slide="nav-next-button"></button>
+                <div class="slide-list" data-slide="list">
 
-    <section class="evento-sub">
-        <h1>Este Mês</h1>
+                    <div class="slide-item" data-slide="item" data-index="0">
+                        <div class="slide-content">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                            <div class="slide-description">
+                                <h3>Título do evento</h3>
+                                <p>Descreva brevemente seu evento aqui.</p>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="card-container">
-            <div class="card2">
-                <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="Descrição da Imagem">
-                <div class="card2-description">
-                    <h2>Descrição da Imagem</h2>
-                    <p>Aqui você pode adicionar uma breve descrição sobre a imagem.</p>
+                    <div class="slide-item" data-slide="item" data-index="1">
+                        <div class="slide-content">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                            <div class="slide-description">
+                                <h3>Título do evento</h3>
+                                <p>Descreva brevemente seu evento aqui.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-item" data-slide="item" data-index="2">
+                        <div class="slide-content">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                            <div class="slide-description">
+                                <h3>Título do evento</h3>
+                                <p>Descreva brevemente seu evento aqui.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-item" data-slide="item" data-index="3">
+                        <div class="slide-content">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                            <div class="slide-description">
+                                <h3>Título do evento</h3>
+                                <p>Descreva brevemente seu evento aqui.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-item" data-slide="item" data-index="4">
+                        <div class="slide-content">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                            <div class="slide-description">
+                                <h3>Título do evento</h3>
+                                <p>Descreva brevemente seu evento aqui.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-controls" data-slide="controls-wrapper">
+
                 </div>
             </div>
+        </div>
+
+    </section>
+
+    
+    <section class="eventos-mes" id="#evento-mes">
+        <h1 class="titulo-eventos">Este Mês</h1>
+
+        <div class="container">
+            <div class="card">
+                <div class="img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                </div>
+
+                <div class="content">
+                    <h1>Título do evento</h1>
+                    <p>Descreva breviamente seu evento</p>
+                    <button class="button-card">Ver detalhes</button>
+                </div>
+
+                
+                
+            </div>
+
+            <div class="card">
+                <div class="img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                </div>
+
+                <div class="content">
+                    <h1>Título do evento</h1>
+                    <p>Descreva breviamente seu evento</p>
+                    <button class="button-card">Ver detalhes</button>
+                </div>
+
+                
+                
+            </div>
+
+            <div class="card">
+                <div class="img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                </div>
+
+                <div class="content">
+                    <h1>Título do evento</h1>
+                    <p>Descreva breviamente seu evento</p>
+                    <button class="button-card">Ver detalhes</button>
+                </div>
+
+               
+                
+            </div>
+
+            <div class="card">
+                <div class="img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                </div>
+
+                <div class="content">
+                    <h1>Título do evento</h1>
+                    <p>Descreva breviamente seu evento</p>
+                    <button class="button-card">Ver detalhes</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                </div>
+
+                <div class="content">
+                    <h1>Título do evento</h1>
+                    <p>Descreva breviamente seu evento</p>
+                    <button class="button-card">Ver detalhes</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                </div>
+
+                <div class="content">
+                    <h1>Título do evento</h1>
+                    <p>Descreva breviamente seu evento</p>
+                    <button class="button-card">Ver detalhes</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                </div>
+
+                <div class="content">
+                    <h1>Título do evento</h1>
+                    <p>Descreva breviamente seu evento</p>
+                    <button class="button-card">Ver detalhes</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="banner">
+                </div>
+
+                <div class="content">
+                    <h1>Título do evento</h1>
+                    <p>Descreva breviamente seu evento</p>
+                    <button class="button-card">Ver detalhes</button>
+                </div>
+            </div>
+
+ 
+        </div>
         
-            <div class="card2">
-                <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="Descrição da Imagem">
-                <div class="card2-description">
-                    <h2>Descrição da Imagem</h2>
-                    <p>Aqui você pode adicionar uma breve descrição sobre a imagem.</p>
-                </div>
-            </div>
-
-            <div class="card2">
-                <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="Descrição da Imagem">
-                <div class="card2-description">
-                    <h2>Descrição da Imagem</h2>
-                    <p>Aqui você pode adicionar uma breve descrição sobre a imagem.</p>
-                </div>
-            </div>
-
-            <div class="card2">
-                <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="Descrição da Imagem">
-                <div class="card2-description">
-                    <h2>Descrição da Imagem</h2>
-                    <p>Aqui você pode adicionar uma breve descrição sobre a imagem.</p>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <section class="oportunidades">
-        <h1>Oportunidades</h1>    
-        <div class="card2">
-            <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2Fbanner.png?alt=media" alt="Descrição da Imagem">
-            <div class="card2-description">
-                <h2>Descrição da Imagem</h2>
-                <p>Aqui você pode adicionar uma breve descrição sobre a imagem.</p>
-            </div>
-        </div>
-    </section>
 
-    <a href="#principal" class="back-top">
+    <a id="btnScrollToTop" class="back-top">
         <span class="material-icons">
             <i class="fa-solid fa-arrow-up"></i>
         </span>
@@ -198,7 +338,28 @@
         </div>
     </footer>
 
+    <script src="js/slide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
     <script type="module">
+
+    var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+            });
+        initSlider({
+            autoPlay: true,  // caso queira que pare colocar aqui como false
+            startAtIndex: 0,  // qual slide iniciar
+            timeInterval: 3000  // tempo de passar o slide
+
+        })
+        
+
+
+
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
@@ -211,55 +372,11 @@
         messagingSenderId: "597701968157",
         appId: "1:597701968157:web:f68c02a3af92448f0021f4",
         measurementId: "G-4LDGHT0HJ9"
-    };
+        };
 
      // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-
-   // Função para formatar a data e hora
-      // Função para formatar a data e hora em UTC
-      function formatDateTimeUTC() {
-        const now = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZone: 'UTC' };
-        return now.toLocaleDateString('pt-BR', options);
-    }
-
-    // Função para verificar se a data é futura ou passada
-    function isFutureDateUTC(dateTimeString) {
-        const dateTime = new Date(dateTimeString);
-        return dateTime > new Date();
-    }
-
-    // Atualize a data e hora em todos os elementos com a classe "date-time"
-    document.querySelectorAll('.date-time').forEach(element => {
-        const dateTimeString = element.textContent;
-        element.textContent = formatDateTimeUTC();
-
-        if (isFutureDateUTC(dateTimeString)) {
-            element.classList.add('future');
-        } else {
-            element.classList.add('past');
-        }
-    });
-
-    // Atualize a cada minuto (opcional)
-    setInterval(() => {
-        document.querySelectorAll('.date-time').forEach(element => {
-            const dateTimeString = element.textContent;
-            element.textContent = formatDateTimeUTC();
-
-            // Remova a classe anterior e adicione a classe correspondente à data atualizada
-            element.classList.remove('future', 'past');
-            if (isFutureDateUTC(dateTimeString)) {
-                element.classList.add('future');
-            } else {
-                element.classList.add('past');
-            }
-        });
-    }, 60000); // Atualiza a cada minuto (60000 milissegundos)
-
-
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
 
 </script>
 
