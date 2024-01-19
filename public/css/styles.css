@@ -110,6 +110,7 @@ body{
     display: flex;
     list-style: none;
     margin: auto 0;
+    align-items: center;
 
         
 }
@@ -136,6 +137,8 @@ body{
     margin: auto 0;
     height: 35px;
     line-height: 35px;
+    
+    
 }
 
 .navbar-second .search-box input{
@@ -146,6 +149,7 @@ body{
     padding: 0 10px;
     font-size: 20px;
     width: 350px;
+    
 
 }
 
@@ -635,13 +639,21 @@ footer {
         width: 100%;
         margin-top: 15px;
         justify-content: center;
-        
-
+        margin-bottom: 20px;
         
     }
 
     .navbar-second .search-box input{
         width: 90%;
+        background-color: #07002657;
+        
+        
+
+    }
+
+    .navbar-second .search-box span{
+        background-color: #07002657;
+        color: #070026;
 
     }
 
@@ -652,7 +664,7 @@ footer {
         position: absolute;
         width: 100%;
         left: 0;
-        top: 150px;
+        top: 100px;
         height: 0;
         transition: 0.5s;
         visibility: hidden;
@@ -796,7 +808,7 @@ footer {
     }
 
     .navbar-second.active .nav-list{
-        height: calc(100vh - 150px);
+        height: calc(100vh - 100px);
         visibility: visible;
         overflow-y: auto;
     }
