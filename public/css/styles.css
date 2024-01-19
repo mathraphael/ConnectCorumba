@@ -81,6 +81,11 @@ body{
     height: 128px;
     z-index: 3;
     color: transparent;
+    margin-bottom: 50px;
+}
+
+.destaques{
+    height: calc(100vh - 200px);
 }
 
 .navbar-second .item-esq{
@@ -304,10 +309,9 @@ body{
 }
 
 .slide-control-button{
-    color: #FFF;
+    color: #ffffffbd;
     background: transparent;
-    text-shadow: 0px 4px 3px #070026;
-    font-size: 15px;
+    font-size: 12px;
     margin: 0 5px;
     border: none;
     
@@ -747,7 +751,7 @@ footer {
     }
 
     .slide-control-button{
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .slide-nav-button{
@@ -829,7 +833,7 @@ footer {
 
 @media screen and (max-width : 600px) {
     .slide-item{
-        width: 98%;
+        width: 100%;
     }
     
     .destaques{
