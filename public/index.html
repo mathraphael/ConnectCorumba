@@ -47,24 +47,43 @@
         </div>
     </nav>
 
+    
+                
     <nav class="navbar-second" id="nav">
-       
+       <div class="items">
         <div class="item-esq">
             <div class="icon">
                 <h1 class="title">CONNECT PANTANAL</h1>
-                <input type="checkbox" id="checkbox" class="checkbox"/>
-                <label for="checkbox" class="label-menu">
-                    <span class="hamburger"></span>
-                </label>
                 <img src="https://firebasestorage.googleapis.com/v0/b/connect-pantanal.appspot.com/o/imagens%2FLOGO.png?alt=media" alt="logo">
             </div>
+
+            
+            </div>
+
+            <div class="item-dir">
+
+                <button 
+                class="btn-menu"
+                aria-label = "Abrir Menu"
+                aria-haspopup="true"
+                aria-controls="nav-list"
+                aria-expanded="true"
+                >
+                
+                    <span class="hamburger"></span>
+                </button>
+
+            </div>
+        </div>
+
             <div class="search-box">
+
                 <input  type="search" placeholder="Buscar">
                 <span class="fa fa-search"></span>
             </div>
-        </div>
+        
              
-        <ol class="nav-list">
+        <ol class="nav-list" id="nav-list" role="nav-list">
             <li><a href="/public/index.html">Home</a></li>
             <li><a href="#">Eventos</a></li>
             <li><a href="/public/paginas/sobre-nos.html">Sobre  Nós</a></li>

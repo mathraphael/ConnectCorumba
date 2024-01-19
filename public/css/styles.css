@@ -20,14 +20,18 @@ body{
 }
 
 
+.section{
+    
+}
+
+
 .navbar-one{
     padding: 0 30px;
     width: 100%;
 
 }
 
-.label-menu,
-.checkbox{
+.btn-menu{
     display: none;
 }
 
@@ -48,6 +52,11 @@ body{
  
 .slogan-title{
     font-size: 12px;
+}
+
+.slogan-title:hover{
+    color: #ee256e;
+    transition: all 0.5s;
 }
 
 
@@ -81,20 +90,24 @@ body{
 
 .navbar-second .item-esq{
     display: flex;
+    
 
 }
 
 .navbar-second .title{
     color: #FFFF;
     display: flex;
+    
+    align-items: center;
     letter-spacing: 1px;
     display: none;
 }
 
+
 .icon img{
-    width: 180px;
-    justify-content: center;
-    text-align: center;
+    width: 150px;
+    display: flex;
+    justify-items: center;
 }
 
 
@@ -111,14 +124,14 @@ body{
     color: #FFFF;
     font-size: 18px;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: uppercase;
     letter-spacing: 1px;
     padding: 5px 30px;
 }
 
 .navbar-second ol li:hover a{
-    background-color: #FFFF;
-    color: #070026;
+    color: #ee256e;
+    text-decoration: underline;
     transition: 0.5s;
 
 }
@@ -195,7 +208,8 @@ body{
     display: flex;
     align-items: center;
     width: 100%;
-    height: 500px;
+    height: 450px;
+
     
 }
 
@@ -307,10 +321,13 @@ body{
 }
 
 
+
 .titulo-eventos{
     color: #FFF;
     text-shadow: 0px 4px 3px #070026;
-    padding: 30px 30px;
+    margin: 30px;
+    margin-top: 20px;
+    
 }
 
 
@@ -434,6 +451,7 @@ background-position: center;
 footer {
     width: 100%;
     color: #fff;
+    margin-top: 5rem;
     
 }
 
@@ -446,7 +464,7 @@ footer {
     background-color: #070026;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 3.5rem 2.5rem;
+    padding: 1.5rem 2rem;
     height: 50%;
 }
 
@@ -546,7 +564,7 @@ footer {
     color: white;
     padding: 0px 1.25rem;
     font-size: 1.5rem;
-    height: 43px;
+    height: 48px;
     border-radius: 0px 4px 4px 0px;
     cursor: pointer;
     transition: all 0.4s;
@@ -614,58 +632,42 @@ footer {
 
     .navbar-second .title{
         display: flex;
-        padding: 15px 30px;
+        
+        
     }
 
     .navbar-second .search-box{
         width: 100%;
+        margin-top: 15px;
         justify-content: center;
-        margin-bottom: 13px;
-        margin-top: 20px;
+        
+
+        
     }
 
     .navbar-second .search-box input{
         width: 90%;
-    }
-
-    .btn-mobile{
-        display: inline-block;
-        text-align: center;
-        padding: .5rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: none;
-        cursor: pointer;
-        gap: .5rem;
-        color: #FFF;
 
     }
-    .btn-mobile i{
-        font-size: 25px;
-    }
 
-    .navbar-second ol{
+    .navbar-second .nav-list{
         display: block;
         flex-direction: column;
         background: #FFF;
         position: absolute;
         width: 100%;
-        top: 128px;
-        height: 0px;
-        transition: .6s;
-        z-index: 1000;
+        left: 0;
+        top: 150px;
+        height: 0;
+        transition: 0.5s;
         visibility: hidden;
-        overflow-y: hidden;
+        z-index: 1000;
+        overflow-y: hidden ;
+        
+        
     
     }
 
-    #nav.active .nav-list{
-        height: calc(100vh - 128px);
-        visibility: visible;
-        overflow-y: auto;
-        
-        
-    }
 
     .navbar-second ol li{
         text-align: center;
@@ -699,9 +701,16 @@ footer {
         display: none;
     }
 
-    .navbar-second .item-esq{
-        display: inline;
+    .navbar-second .item-dir{
+        display: flex;
     }
+
+    .navbar-second .items{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 30px;
+    }
+
 
     #footer_content{
         grid-template-columns: repeat(1, 1fr);
@@ -752,22 +761,31 @@ footer {
   
 
     .wrapper{
-        height: 300px;
+        height: 350px;
     }
 
-    .label-menu{
+    .btn-menu{
+        background: none;
+        border: none;
+        font: inherit;
         display: flex;
         align-items: center;
-        justify-content: end;
         gap: 0.5rem;
         color: #FFF;
-        padding: 15px 30px;
+        padding-block: 1rem;
         cursor: pointer;
     }
+
+    
 
     .hamburger{
         border-top: 0.125rem solid;
         width: 1.25rem;
+    }
+
+    .navbar-second .icon{
+        display: flex;
+        
     }
 
     .hamburger::before,
@@ -778,6 +796,27 @@ footer {
         height: 0.125rem;
         background: currentColor;
         margin-top: 0.3125rem;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .navbar-second.active .nav-list{
+        height: calc(100vh - 150px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .navbar-second.active .hamburger{
+        border-top-color:transparent ;
+    }
+
+    .navbar-second.active .hamburger::before{
+        transform: rotate(135deg);
+    }
+
+    .navbar-second.active .hamburger::after{
+        transform: rotate(-135deg);
+        top: -0.4375rem;
     }
 
 }
@@ -789,7 +828,11 @@ footer {
     
     .destaques{
         padding-top: 30px;
+        height: 80%;
     }
+
+
+
 }
 
 
