@@ -649,6 +649,17 @@ scroll
     visibility: hidden;
 }
 
+.efeito-botao1,
+.efeito-botao2,
+.efeito-botao3,
+.efeito-botao4,
+.efeito-botao5,
+.efeito-botao6,
+.efeito-botao7,
+.efeito-botao8{
+    visibility: hidden;
+}
+
 @media screen and (max-width : 1250px) {
     .navbar-second{
         display: block;
