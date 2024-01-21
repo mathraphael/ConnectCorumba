@@ -885,8 +885,15 @@ scroll
         margin-bottom: 0;
     }
 
+}
 
+@media screen and (max-width: 1500px){
 
+    .navbar-second{
+        margin-bottom: 20px;
+    }
+
+    
 }
 
 
